@@ -1,0 +1,18 @@
+STEPS:
+
+1. Unzip the folder.
+2. Go inside "backend" folder.
+3. run "$npm install" to install packages.
+4. run "PRV_KEY="private_key/number" npm start" (first param PRV_KEY is used to env variable to generate token with given private key).
+5. server will run on  localhost:3000
+5. localhost:3000/connectfour/start?user_name="username" ->GET Request to start game
+6. localhost:3000/connectfour/move/  ->POST request to take a move 
+    -> sample body
+            {
+                "token":"newly genrated token",
+                "column":"2",
+                "chance":"red"
+            }
+    
+7. localhost:3000/connectfour/end/ -> DELETE request to end the game
+ 
